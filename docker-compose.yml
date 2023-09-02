@@ -1,0 +1,19 @@
+version: "3.9"
+name: llama-inference
+
+services:
+
+  llama-inference:
+    build: .
+    container_name: llama-inference
+    network_mode: host
+    volumes:
+      - ./models:/app/models
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
