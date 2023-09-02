@@ -1,0 +1,9 @@
+torch
+transformers
+accelerate
+optimum
+auto-gptq
+fastapi
+uvicorn
+gunicorn
+loguru
